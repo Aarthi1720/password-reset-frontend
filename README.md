@@ -8,7 +8,9 @@ This is the frontend of the **Password Reset Flow** project built using **React*
 
 - 🔐 User Registration & Login with JWT
 - 🧠 Forgot Password flow with reset link
+- 🔑 JWT Authentication (with Local Storage)
 - 📝 Reset password via token
+- 🚪 Logout feature (removes JWT and redirects user)
 - 📤 Toast notifications using `react-toastify`
 - 🎨 Clean and responsive UI using Bootstrap
 
@@ -22,11 +24,23 @@ This is the frontend of the **Password Reset Flow** project built using **React*
 - 💅 **Bootstrap 5** - For responsive layout and styling
 - 🔔 **React-Toastify** - For showing alert messages (toast notifications)
 - 📡 **Axios** - For handling API requests to the backend
-- 🧠 **JWT(JSON Web Token) - Used for secure authentication (stored in localStorage)
+- 🧠 **JWT(JSON Web Token)** - Used for secure authentication (stored in localStorage)
 
 ---
 
-## 🔗 Backend API Endpoint
+## 🧭 Frontend Routes(React Router)
+
+| Path                   | Description                        |
+|------------------------|------------------------------------|
+| `/`                    | Home Page                          |
+| `/register`            | Register New User                  |
+| `/login`               | Login Existing User                |
+| `forgot-password`      | Form to Request Reset Email        |
+| `reset-password`       | Reset Form With Token from Email   |
+
+---
+
+## 🔗 Backend API Endpoints
 
 | Method | Route                     | Description              |
 |--------|---------------------------|--------------------------|
