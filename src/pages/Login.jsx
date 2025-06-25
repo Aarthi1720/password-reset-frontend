@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { toast } from "react-toastify";
 
@@ -11,7 +11,6 @@ const Login = () => {
   });
 
   const { login } = useContext(AuthContext);
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,7 +27,6 @@ const Login = () => {
       login(token); //Save token to localStorage + context
       toast.success(res.data.message);
       setFormData({ email: "", password: "" });
-      navigate("/"); //Redirect to homepage
     } catch (error) {
       toast.error(error.response?.data?.message || "Login failed");
     }
