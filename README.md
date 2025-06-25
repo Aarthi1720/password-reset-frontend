@@ -30,21 +30,21 @@ This is the frontend of the **Password Reset Flow** project built using **React*
 
 ## 🧭 Frontend Routes(React Router)
 
-| Path                   | Description                        |
-|------------------------|------------------------------------|
-| `/`                    | Home Page                          |
-| `/register`            | Register New User                  |
-| `/login`               | Login Existing User                |
-| `forgot-password`      | Form to Request Reset Email        |
-| `reset-password`       | Reset Form With Token from Email   |
+| Path              | Description                      |
+| ----------------- | -------------------------------- |
+| `/`               | Home Page                        |
+| `/register`       | Register New User                |
+| `/login`          | Login Existing User              |
+| `forgot-password` | Form to Request Reset Email      |
+| `reset-password`  | Reset Form With Token from Email |
 
 ---
 
 ## 🔗 Backend API Endpoints
 
-| Method | Route                     | Description              |
-|--------|---------------------------|--------------------------|
-| POST   | /api/register             | Register new user        |
-| POST   | /api/login                | Login and get token      |
-| POST   | /api/forgot-password      | Send reset link          |
-| POST   | /api/reset-password       | Reset password           |
+| Method | Route                | Description         |
+| ------ | -------------------- | ------------------- |
+| POST   | /api/register        | Register new user   |
+| POST   | /api/login           | Login and get token |
+| POST   | /api/forgot-password | Send reset link     |
+| POST   | /api/reset-password  | Reset password      |
