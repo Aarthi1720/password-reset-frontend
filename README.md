@@ -35,8 +35,8 @@ This is the frontend of the **Password Reset Flow** project built using **React*
 | `/`               | Home Page                        |
 | `/register`       | Register New User                |
 | `/login`          | Login Existing User              |
-| `forgot-password` | Form to Request Reset Email      |
-| `reset-password`  | Reset Form With Token from Email |
+| `/forgot-password` | Form to Request Reset Email      |
+| `/reset-password`  | Reset Form With Token from Email |
 
 ---
 
@@ -48,3 +48,9 @@ This is the frontend of the **Password Reset Flow** project built using **React*
 | POST   | /api/login           | Login and get token |
 | POST   | /api/forgot-password | Send reset link     |
 | POST   | /api/reset-password  | Reset password      |
+
+---
+
+## 📸 Screenshot
+
+![alt text](image.png)
