@@ -36,16 +36,28 @@ const Navbar = () => {
         >
           <ul className="navbar-nav ms-auto gap-3">
             {token ? (
-              <li className="nav-item">
-                <button
-                  onClick={handleLogout}
-                  className="bg-white btn btn-link text-black"
-                >
-                  Logout
-                </button>
-              </li>
+              <>
+                <li className="nav-item">
+                  <Link to={"/"} className="text-white">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <button
+                    onClick={handleLogout}
+                    className="bg-white btn btn-link text-black"
+                  >
+                    Logout
+                  </button>
+                </li>
+              </>
             ) : (
               <>
+                <li className="nav-item">
+                  <Link to={"/"} className="text-white">
+                    Home
+                  </Link>
+                </li>
                 <li className="nav-item">
                   <Link to={"/register"} className="text-white">
                     Register
