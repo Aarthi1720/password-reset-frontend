@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 
 const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const { token } = useParams(); //get token from URL
   const navigate = useNavigate();
 
@@ -36,13 +37,17 @@ const ResetPassword = () => {
                 <i className="bi bi-lock"></i>
               </span>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 className="form-control"
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Enter your new password"
                 value={newPassword}
                 required
               />
+              {/* Eye icon */}
+              <span className="input-group-text" onClick={()=>setShowPassword(!showPassword)} style={{cursor: "pointer"}}>
+                <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
+              </span>
             </div>
           </div>
           <button type="submit" className="btn btn-success w-100">

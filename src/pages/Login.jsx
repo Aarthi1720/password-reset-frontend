@@ -10,6 +10,8 @@ const Login = () => {
     password: "",
   });
 
+  const [showPassword, setShowPassword] = useState(false);
+
   const { login } = useContext(AuthContext);
 
   const handleChange = (e) => {
@@ -63,7 +65,7 @@ const Login = () => {
                 <i className="bi bi-lock"></i>
               </span>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
                 className="form-control"
                 value={formData.password}
@@ -71,6 +73,10 @@ const Login = () => {
                 placeholder="Enter your password"
                 required
               />
+               {/* Eye icon */}
+              <span className="input-group-text" onClick={()=>setShowPassword(!showPassword)} style={{cursor: "pointer"}}>
+                <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
+              </span>
             </div>
           </div>
           <button type="submit" className="btn btn-success w-100">

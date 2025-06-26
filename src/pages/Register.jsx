@@ -9,6 +9,8 @@ const Register = () => {
     email: "",
     password: "",
   });
+
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -83,7 +85,7 @@ const Register = () => {
                 <i className="bi bi-lock"></i>
               </span>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
                 className="form-control"
                 value={formData.password}
@@ -91,6 +93,11 @@ const Register = () => {
                 placeholder="Enter your password"
                 required
               />
+
+              {/* Eye icon */}
+              <span className="input-group-text" onClick={()=>setShowPassword(!showPassword)} style={{cursor: "pointer"}}>
+                <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
+              </span>
             </div>
           </div>
           <button type="submit" className="btn btn-primary w-100">
